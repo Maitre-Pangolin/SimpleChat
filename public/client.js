@@ -21,7 +21,15 @@ chatForm.addEventListener("submit", (event) => {
       user: username,
       message: input.value,
     });
+
+    const newMessage = document.createElement("li");
+    const content = document.createElement("p");
+    content.textContent = input.value;
+    newMessage.className = "self-message";
+    newMessage.appendChild(content);
+    messages.appendChild(newMessage);
     input.value = "";
+    messages.scrollTo(0, messages.scrollHeight);
   }
 });
 
@@ -36,12 +44,15 @@ loggingForm.addEventListener("submit", (event) => {
 });
 
 socket.on("broadcast message", ({ user, message }) => {
-  console.log("im");
   const newMessage = document.createElement("li");
-  newMessage.textContent = user + ":   " + message;
+  const sender = document.createElement("strong");
+  const content = document.createElement("p");
+  sender.textContent = user;
+  content.textContent = message;
   newMessage.className = "other-message";
+  newMessage.appendChild(sender);
+  newMessage.appendChild(content);
   messages.appendChild(newMessage);
-  window.scrollTo(0, document.body.scrollHeight);
 });
 
 socket.on("logging update", (users) => {

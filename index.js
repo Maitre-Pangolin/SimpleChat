@@ -19,8 +19,9 @@ let userList = [];
 io.on("connection", (socket) => {
   console.log("User connection");
 
+  socket.emit("logging update", userList);
+
   socket.on("post message", (msg) => {
-    console.log("es");
     socket.broadcast.emit("broadcast message", msg);
   });
 
