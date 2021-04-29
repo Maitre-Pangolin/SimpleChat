@@ -14,16 +14,26 @@ app.get("*", (req, res) => {
   res.status(404).send("Nothing to see here buddy");
 });
 
-userList = [];
+let userList = [];
 
 io.on("connection", (socket) => {
   console.log("User connection");
 
-  socket.on("chat message", (msg) => {
-    io.emit("broadcast message", msg);
+  socket.on("post message", (msg) => {
+    console.log("es");
+    socket.broadcast.emit("broadcast message", msg);
   });
+
   socket.on("disconnect", () => {
     console.log("User deconnection");
+    userList = userList.filter((e) => e != socket.username);
+    io.emit("logging update", userList);
+  });
+
+  socket.on("user logging", (username) => {
+    socket.username = username;
+    userList.push(username);
+    io.emit("logging update", userList);
   });
 });
 
