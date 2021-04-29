@@ -7,16 +7,40 @@
     <title>Simple Chat by Maitre-Pangolin</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nunito:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js" defer></script>
   </head>
   <body>
-    <h1>Maitre Pangolin's incredible chat</h1>
-    <div id="chat">
+    <header>Maitre Pangolin's incredible chat</header>
+    <div id="container">
       <ul id="messages"></ul>
-      <form id="chat-form" action="">
-        <input id="input" autocomplete="off" value="" /><button>Send</button>
-      </form>
+      <aside id="connection">
+        <h2>Connected users : 0</h2>
+        <ul></ul>
+      </aside>
     </div>
+    <form id="chat-form" action="">
+      <div id="username">Username</div>
+      <input id="input" type="text" autocomplete="off" value="" /><button>
+        Send
+      </button>
+    </form>
+
+    <form id="logging-form" action="">
+      <input
+        id="input-username"
+        type="text"
+        autocomplete="off"
+        value=""
+        placeholder="Input user name ..."
+      /><button>Let me chat</button>
+    </form>
   </body>
 </html>

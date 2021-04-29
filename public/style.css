@@ -1,0 +1,185 @@
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 0.5em;
+  padding-left: 2em;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px black solid;
+  color: #6200ee;
+  font-family: "Architects Daughter", cursive;
+  font-size: 30px;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  box-sizing: border-box;
+}
+
+#messages {
+  height: 100%;
+  margin: 0;
+  flex-grow: 1;
+  margin: 0 20px;
+  list-style-type: none;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-wrap: normal;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.other-message {
+  width: fit-content;
+  background-color: #6200ee;
+}
+
+.self-message {
+  display: flex;
+  align-self: flex-end;
+  background-color: #9e55fc;
+}
+
+#messages > li {
+  padding: 0.5rem 1rem;
+  margin: 0.5em;
+  width: fit-content;
+  max-width: 60%;
+  word-break: break-word;
+  border-radius: 2em;
+  color: white;
+}
+
+li strong {
+  color: #bfbfbf;
+  padding: 0 1em 0 0;
+  margin-bottom: 2em;
+}
+
+li p {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+#connection {
+  border: 1px solid #6200ee;
+  margin: 0 20px;
+  padding: 0 2em;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom right, #d7bafc, white);
+  color: #6200ee;
+}
+
+#connection ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+
+#chat-form {
+  background: #6300ee3d;
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+}
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  margin: 0.25rem;
+  box-shadow: none;
+  font-family: "Nunito", sans-serif;
+}
+#input:focus {
+  box-shadow: none;
+  outline: none;
+  box-shadow: 0 0 2pt 1pt black;
+}
+
+#chat-form > div {
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em;
+  color: #6200ee;
+  font-family: "Architects Daughter", cursive;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#chat-form > button {
+  background: #6200ee;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  font-family: "Architects Daughter", cursive;
+  font-size: larger;
+}
+
+#logging-form {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #0000003f;
+}
+
+#input-username {
+  margin: 1em 0;
+  padding: 0.5em 0.5em;
+  font-size: 20px;
+  font-family: "Architects Daughter", cursive;
+  min-width: 30vw;
+}
+
+#input-username:focus {
+  outline: none;
+}
+
+#logging-form > button {
+  padding: 1em 1em;
+  border: none;
+  background-color: #6200ee;
+  border-radius: 4em;
+  color: white;
+  font-size: 20px;
+  font-family: "Architects Daughter", cursive;
+}
+
+#logging-form > button:hover {
+  background-color: #9e55fc;
+  color: white;
+  transform: scale(1.1);
+}
