@@ -43,6 +43,10 @@ loggingForm.addEventListener("submit", (event) => {
   }
 });
 
+inputUser.addEventListener("click", () => {
+  inputUser.value = usernameGenerator();
+});
+
 socket.on("broadcast message", ({ user, message }) => {
   const newMessage = document.createElement("li");
   const sender = document.createElement("strong");
