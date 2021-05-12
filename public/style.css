@@ -14,8 +14,8 @@ header {
   width: 100%;
   background-color: white;
   border-bottom: 2px black solid;
-  color: #6200ee;
-  font-family: "Architects Daughter", cursive;
+  color: #0077b6;
+  font-family: "Syne Mono", monospace;
   font-size: 30px;
 }
 
@@ -47,13 +47,13 @@ header {
 
 .other-message {
   width: fit-content;
-  background-color: #6200ee;
+  background-color: #0077b6;
 }
 
 .self-message {
   display: flex;
   align-self: flex-end;
-  background-color: #9e55fc;
+  background-color: #90e0ef;
 }
 
 #messages > li {
@@ -78,24 +78,23 @@ li p {
 }
 
 #connection {
-  border: 1px solid #6200ee;
+  border: 1px solid #0077b6;
+  border-left: 4px solid #0077b6;
   margin: 0 20px;
   padding: 0 2em;
-  border-radius: 20px;
-  background-image: linear-gradient(to bottom right, #d7bafc, white);
-  color: #6200ee;
+  color: #0077b6;
 }
 
 #connection ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-family: "Architects Daughter", cursive;
+  font-family: "Syne Mono", monospace;
   font-size: 20px;
 }
 
 #chat-form {
-  background: #6300ee3d;
+  background: #9fbeec;
   padding: 0.25rem;
   position: fixed;
   bottom: 0;
@@ -128,21 +127,21 @@ li p {
   justify-content: center;
   align-items: center;
   padding: 0 2em;
-  color: #6200ee;
-  font-family: "Architects Daughter", cursive;
+  color: #0077b6;
+  font-family: "Syne Mono", monospace;
   font-size: larger;
   font-weight: bolder;
 }
 
 #chat-form > button {
-  background: #6200ee;
+  background: #0077b6;
   border: none;
   padding: 0 1rem;
   margin: 0.25rem;
   border-radius: 3px;
   outline: none;
   color: #fff;
-  font-family: "Architects Daughter", cursive;
+  font-family: "Syne Mono", monospace;
   font-size: larger;
 }
 
@@ -163,7 +162,7 @@ li p {
   margin: 1em 0;
   padding: 0.5em 0.5em;
   font-size: 20px;
-  font-family: "Architects Daughter", cursive;
+  font-family: "Syne Mono", monospace;
   min-width: 30vw;
 }
 
@@ -174,15 +173,14 @@ li p {
 #logging-form > button {
   padding: 1em 1em;
   border: none;
-  background-color: #6200ee;
+  background-color: #0077b6;
   border-radius: 4em;
   color: white;
   font-size: 20px;
-  font-family: "Architects Daughter", cursive;
+  font-family: "Syne Mono", monospace;
 }
 
 #logging-form > button:hover {
-  background-color: #9e55fc;
+  background-color: #0076b686;
   color: white;
-  transform: scale(1.1);
 }
