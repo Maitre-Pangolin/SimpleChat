@@ -9,6 +9,7 @@ Goal is to build a real-time chat application with basic functionnality :
 - List of logged users
 - No room functionnality
 - No data persistance
+- Random username generation via own npm library
 
 ## Deployment
 
@@ -25,10 +26,7 @@ Make sure you have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs
 
 App should be accessible on local port 3000.
 
-## Preview
 
-![welcome screen](/img/Welcome.JPG)
-![InChat](/img/InChat.JPG)
 
 ## What was learned
 
